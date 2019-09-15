@@ -18,7 +18,7 @@ body {
 .parent {
     display: grid;
     width: 100%;
-    grid-template-columns: 1.5fr 9fr 1.5fr;
+    grid-template-columns: 1fr 10fr 1fr;
     grid-template-rows: 130px auto 130px;
     grid-template-areas:
         "item1 item1 item1"
@@ -41,39 +41,43 @@ body {
 
 .divitem2 {
     grid-area: item2;
-    border-left: 2px solid lightgray;
-    border-right: 2px solid lightgray;
+    margin: 1rem 0;
 }
 
 .divitem3 {
     grid-area: item3;
-    border-top: 2px solid lightgray;
+    border-top: 1px solid lightgray;
+    margin: 0;
+    padding: 1rem 0;
+    text-align: center;
 }
 
 .divitem2 > h3 {
-    padding: 2rem;
-    margin: 2rem 0;
-    border-left: 2px solid lightgray;
-    border-top: 2px solid lightgray;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 1px solid lightgray;
+    border-top: 1px solid lightgray;
     text-align: left;
     color: #212121;
+    text-decoration: none;
 }
 
 .divitem2 > p {
-    padding: 2rem;
-    margin: 2rem 0;
-    border-right: 2px solid lightgray;
-    border-bottom: 2px solid lightgray;
+    padding: 1rem;
+    margin: 1rem 0;
     text-align: justify;
     color: #212121;
+    border-bottom: 1px solid lightgray;
+    border-right: 1px solid lightgray;
 }
 
 .divitem2 > blockquote {
-    padding: 2rem;
-    margin: 2rem 0;
+    padding: 0 2rem;
+    margin: 1rem 0;
     color: #212121;
-    border-left: 4px solid lightgray;
+    border-left: 2px solid lightgray;
     text-align: justify;
+    font-style: italic;
 }
 
 /*******************************************
@@ -95,8 +99,8 @@ div.polaroid {
     width: 100%;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 2rem auto 0;
-    padding: 1rem;
+    margin: 1rem auto 0;
+    padding: 0;
 }
 
 div.genius {
@@ -107,5 +111,4 @@ div.genius {
     text-decoration: underline;
     text-transform: uppercase;
     font-kerning: auto;
-
 }
