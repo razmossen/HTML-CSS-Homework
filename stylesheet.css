@@ -1,0 +1,112 @@
+/* TODO: Look up CSS inheritance and priority order. */
+/* NOTE: Figure out viewport units in a scalable responsive web-design. vw; vh; v-max; v-min. */
+/* FUTURE: Do not forget about page layout and respective values. */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    font-family: "Roboto", "Lato", sans-serif;
+    font-size: 100%;
+    background-color: lightcoral;
+    color: #212121;
+}
+
+.parent {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1.5fr 9fr 1.5fr;
+    grid-template-rows: 130px auto 130px;
+    grid-template-areas:
+        "item1 item1 item1"
+        ". item2 ."
+        "item3 item3 item3";
+    justify-items: stretch;
+    align-items: stretch;
+    background-color: #f7f7f7;
+}
+
+.divitem1 {
+    grid-area: item1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #212121;
+    color: #f7f7f7;
+}
+
+.divitem2 {
+    grid-area: item2;
+    border-left: 2px solid lightgray;
+    border-right: 2px solid lightgray;
+}
+
+.divitem3 {
+    grid-area: item3;
+    border-top: 2px solid lightgray;
+}
+
+.divitem2 > h3 {
+    padding: 2rem;
+    margin: 2rem 4rem;
+    border-left: 2px solid lightgray;
+    border-top: 2px solid lightgray;
+    text-align: left;
+    color: #212121;
+}
+
+.divitem2 > p {
+    padding: 2rem 4rem;
+    margin: 2rem 4rem;
+    border-right: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
+    text-align: justify;
+    color: #212121;
+}
+
+.divitem2 > blockquote {
+    padding: 2rem 2rem;
+    margin: 2rem 10rem;
+    color: #212121;
+    border-left: 4px solid lightgray;
+    text-align: justify;
+}
+
+/*******************************************
+
+.vline {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    bottom: 0;
+    margin: 0;
+    border: none;
+    border-right: 2px solid lightgray;
+    z-index: -1;
+}
+
+*******************************************/
+
+div.polaroid {
+    width: 50%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 1rem auto 0;
+    padding: 1rem;
+}
+
+div.genius {
+    text-align: center;
+    padding: 1rem;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-kerning: auto;
+
+}
